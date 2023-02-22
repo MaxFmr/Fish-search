@@ -12,7 +12,3 @@ export default defineComponent({
   name: "Header",
 });
 </script>
-
-<style scoped lang="scss">
-/* styles du composant */
-</style>
