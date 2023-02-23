@@ -1,16 +1,23 @@
 <template>
-  <div v-for="specie in species" :key="specie['Scientific Name']">
-    <p>{{ specie["Scientific Name"] }}</p>
-    <img
-      :src="specie['Species Illustration Photo']['src']"
-      :alt="specie['Species Illustration Photo']['src']"
-    />
+  <div class="container">
+    <div v-for="specie in species" :key="specie['Scientific Name']">
+      <Card
+        :img="specie['Species Illustration Photo']['src']"
+        :name="specie['Scientific Name']"
+      />
+    </div>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+import Card from "../card/card.vue";
+import "./CardList.style.scss";
+
 export default defineComponent({
   name: "CardList",
+  components: {
+    Card,
+  },
   data() {
     return {
       species: [],

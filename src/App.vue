@@ -5,7 +5,7 @@
 
 <script lang="ts">
 import Header from "./components/Header/Header.vue";
-import CardList from "./components/CardList.vue";
+import CardList from "./components/CardList/CardList.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
