@@ -3,7 +3,9 @@
   <div class="details">
     <div class="details__img"></div>
     <div class="details__content">
-      <h2 class="details__title">{{ $route.params.name }}</h2>
+      <h2 class="details__title">
+        {{ details["Species Name"] }}
+      </h2>
       <p class="details__text"></p>
     </div>
   </div>
@@ -13,12 +15,33 @@
   import { defineComponent } from "vue";
   export default defineComponent({
     name: "Details",
-    props: {
-      img: String,
-      name: String,
-    },
+
     components: {
       Header,
+    },
+    data() {
+      return {
+        details: {
+          "Species Name": "",
+          "Scientific Name": "",
+          "Species Illustration Photo": {
+            src: "",
+          },
+        },
+        name: this.$route.params.name as string,
+      };
+    },
+    mounted() {
+      fetch(
+        `https://www.fishwatch.gov/api/species/${this.name
+          .toLocaleLowerCase()
+          .replace(" ", "-")}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          this.details = data[0];
+          console.log(this.details);
+        });
     },
   });
 </script>
