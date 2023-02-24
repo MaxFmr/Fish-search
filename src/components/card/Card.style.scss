@@ -15,17 +15,17 @@
   &:hover {
     transform: scale(1.05);
   }
-  .card__image {
+  &__image {
     width: 100em;
     height: 100em;
     object-fit: contain;
   }
-  .card__title {
+  &__title {
     font-size: 1.5rem;
     font-weight: 600;
     margin: 1rem 0;
   }
-  .card__description {
+  &__description {
     font-size: 1rem;
     font-weight: 400;
     margin: 1rem 0;
