@@ -1,9 +1,11 @@
 <template>
-  <router-link :to="{ name: 'details', params: { name } }">
+  <router-link
+    :to="{ name: 'details', params: { name } }"
+    style="text-decoration: none; color: black"
+  >
     <div class="card">
       <div class="card__img">
         <img :src="img" alt="" />
-        <slot></slot>
       </div>
       <div class="card__content">
         <h2 class="card__title">{{ name }}</h2>

@@ -15,7 +15,6 @@
 <script lang="ts">
   import { defineComponent, reactive, onMounted } from "vue";
   import Card from "../card/Card.vue";
-  import "./CardList.style.scss";
   import SearchBar from "../SearchBar/SearchBar.vue";
   import Header from "../Header/Header.vue";
 
@@ -57,3 +56,6 @@
     },
   });
 </script>
+<style lang="scss" scoped>
+  @import "./CardList.style.scss";
+</style>

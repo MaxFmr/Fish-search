@@ -1,14 +1,14 @@
 <template>
   <header class="header">
-    <!-- contenu du composant -->
+    <img src="../../assets/logo.png" alt="" />
   </header>
 </template>
 
 <script lang="ts">
-import "./Header.style.scss";
-import { defineComponent } from "vue";
+  import "./Header.style.scss";
+  import { defineComponent } from "vue";
 
-export default defineComponent({
-  name: "Header",
-});
+  export default defineComponent({
+    name: "Header",
+  });
 </script>

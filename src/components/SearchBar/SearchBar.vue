@@ -1,33 +1,36 @@
 <template>
-  <input v-model="text" @keyup.enter="fetchData" />
+  <div class="searchbar">
+    <label for="searchText">Search by name : </label>
+    <input v-model="text" @keyup.enter="fetchData" />
+  </div>
 </template>
 <script lang="ts">
-import { PropType, defineComponent } from "vue";
-export default defineComponent({
-  name: "SearchBar",
-  props: {
-    searchText: String,
-    fetchData: Function as PropType<() => void>,
-  },
+  import { PropType, defineComponent } from "vue";
+  export default defineComponent({
+    name: "SearchBar",
+    props: {
+      searchText: String,
+      fetchData: Function as PropType<() => void>,
+    },
 
-  computed: {
-    text: {
-      get(): string {
-        return this.searchText as string;
-      },
-      set(value: string) {
-        this.$emit("update:searchText", value);
+    computed: {
+      text: {
+        get(): string {
+          return this.searchText as string;
+        },
+        set(value: string) {
+          this.$emit("update:searchText", value);
+        },
       },
     },
-  },
-  methods: {
-    fetchDataProp() {
-      this.fetchData?.();
+    methods: {
+      fetchDataProp() {
+        this.fetchData?.();
+      },
     },
-  },
-});
+  });
 </script>
 
 <style lang="scss" scoped>
-@import "./SearchBar.style.scss";
+  @import "./SearchBar.style.scss";
 </style>

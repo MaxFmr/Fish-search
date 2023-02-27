@@ -1,4 +1,5 @@
 .card {
+  text-decoration: none;
   margin: 0.5em;
   background-color: lightgray;
   padding: 1rem;
@@ -14,26 +15,11 @@
   cursor: pointer;
   &:hover {
     transform: scale(1.05);
+    font-weight: bolder;
   }
-  &__image {
-    width: 100em;
-    height: 100em;
+  img {
+    width: 10em;
+    height: 10em;
     object-fit: contain;
   }
-  &__title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 1rem 0;
-  }
-  &__description {
-    font-size: 1rem;
-    font-weight: 400;
-    margin: 1rem 0;
-  }
-}
-
-img {
-  width: 10em;
-  height: 10em;
-  object-fit: contain;
 }

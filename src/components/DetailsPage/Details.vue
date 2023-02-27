@@ -1,12 +1,17 @@
 <template>
   <Header />
   <div class="details">
-    <div class="details__img"></div>
+    <button @click="$router.push('/')">Back to Fish Search</button>
+
+    <div class="details__img">
+      <img :src="details['Species Illustration Photo'].src" alt="" />
+    </div>
     <div class="details__content">
       <h2 class="details__title">
         {{ details["Species Name"] }}
       </h2>
-      <p class="details__text"></p>
+      <span class=""> Scientific Name : {{ details["Scientific Name"] }} </span>
+      <span v-html="details[`Biology`]" class="details__text"></span>
     </div>
   </div>
 </template>
@@ -27,6 +32,7 @@
           "Species Illustration Photo": {
             src: "",
           },
+          Biology: "",
         },
         name: this.$route.params.name as string,
       };
@@ -45,3 +51,6 @@
     },
   });
 </script>
+<style lang="scss" scoped>
+  @import "./Details.style.scss";
+</style>
