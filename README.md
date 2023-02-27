@@ -1,3 +1,16 @@
+Here is a from scratch project to verify my skills with VueJS :
+It's a simple data fetch on https://www.fishwatch.gov API.
+
+The goal:
+
+- Confirm that I know how to fetch asynchronous data on client side.
+- Confirm that I know how to create a component.
+- Confirm that I know how to manage data with states and props.
+- Confirm that I know how to configure a simple dynamic router.
+- Confirm that I know how to import style in a component.
+
+Production deploy : https://main--dreamy-malabi-a546e5.netlify.app/
+
 # Vue 3 + TypeScript + Vite
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
