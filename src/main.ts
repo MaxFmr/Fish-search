@@ -13,7 +13,6 @@ const router = createRouter({
       name: "details",
       component: Details,
       props: (route) => ({ id: route.params.name }),
-      exact: true,
     },
     {
       path: "/",
