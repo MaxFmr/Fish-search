@@ -41,8 +41,6 @@
         );
         const data = await response.json();
         state.species = data;
-        console.log(state.species);
-        console.log(state.searchText);
       };
 
       onMounted(() => {

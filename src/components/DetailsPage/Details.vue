@@ -46,7 +46,6 @@
         .then((response) => response.json())
         .then((data) => {
           this.details = data[0];
-          console.log(this.details);
         });
     },
   });
